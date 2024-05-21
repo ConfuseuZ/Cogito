@@ -18,6 +18,7 @@ var grabbed_slot_data: InventorySlotPD
 var external_inventory_owner : Node
 var control_in_focus
 
+
 func _ready():
 	is_inventory_open = false
 	info_panel.hide()
@@ -26,7 +27,6 @@ func _ready():
 
 func open_inventory():
 	if !is_inventory_open:
-		print("Inventory interface: Opening inventory.")
 		is_inventory_open = true
 		get_viewport().gui_focus_changed.connect(_on_focus_changed)
 		inventory_ui.show()
@@ -35,15 +35,21 @@ func open_inventory():
 #		inventory_interface.external_inventory_ui.show()
 
 		for slot_panel in inventory_ui.slot_array:
-			slot_panel.mouse_exited.connect(_slot_on_mouse_exit)
+			if !slot_panel.mouse_exited.is_connected(_slot_on_mouse_exit):
+				slot_panel.mouse_exited.connect(_slot_on_mouse_exit)
 	hot_bar_inventory.hide()
-	
+
+
 func close_inventory():
 	if is_inventory_open:
-		print("Inventory interface: Closing inventory.")
+		if grabbed_slot_data != null: # If the player was holding/moving items, these will be added back to the inventory.
+			get_parent().player.inventory_data.pick_up_slot_data(grabbed_slot_data)
+			grabbed_slot_data = null
 		is_inventory_open = false
 		get_viewport().gui_focus_changed.disconnect(_on_focus_changed)
 		inventory_ui.hide()
+		if external_inventory_owner:
+			external_inventory_owner.close()
 		grabbed_slot.hide()
 		info_panel.hide()
 		external_inventory_ui.hide()
@@ -51,12 +57,16 @@ func close_inventory():
 
 
 func _on_focus_changed(control: Control):
+	if !control.has_method("set_slot_data"):
+		print("Not a slot. returning.")
+		return
+	
 	if control != null:
 		control_in_focus = control
 		
 	if control_in_focus.item_data and !grabbed_slot.visible:
 		item_name.text = control_in_focus.item_data.name
-		item_description.text = control_in_focus.item_data.descpription
+		item_description.text = control_in_focus.item_data.description
 		info_panel.global_position = control_in_focus.global_position + Vector2(0,control_in_focus.size.y)
 		info_panel.show()
 	else:
@@ -88,6 +98,13 @@ func set_external_inventory(_external_inventory_owner):
 	external_inventory_ui.set_inventory_data(inventory_data)
 	
 	external_inventory_ui.show()
+	external_inventory_ui.button_take_all.show()
+	if !external_inventory_ui.button_take_all.pressed.is_connected(_on_take_all_pressed):
+		external_inventory_ui.button_take_all.pressed.connect(_on_take_all_pressed)
+
+
+func _on_take_all_pressed():
+	external_inventory_owner.inventory_data.take_all_items(get_parent().player.inventory_data)
 
 
 func clear_external_inventory():
@@ -104,7 +121,8 @@ func clear_external_inventory():
 
 func set_player_inventory_data(inventory_data : InventoryPD):
 #	inventory_data.inventory_interact.connect(on_inventory_interact)
-	inventory_data.inventory_button_press.connect(on_inventory_button_press)
+	if !inventory_data.inventory_button_press.is_connected(on_inventory_button_press):
+		inventory_data.inventory_button_press.connect(on_inventory_button_press)
 	inventory_ui.set_inventory_data(inventory_data)
 
 # Inventory handling on gamepad buttons
@@ -122,9 +140,11 @@ func on_inventory_button_press(inventory_data: InventoryPD, index: int, action: 
 		[_, "inventory_drop_item"]:
 			grabbed_slot_data = inventory_data.get_slot_data(index)
 			if grabbed_slot_data:
-				if grabbed_slot_data.inventory_item.ItemType.WIELDABLE and grabbed_slot_data.inventory_item.is_being_wielded:
+				if grabbed_slot_data.inventory_item.has_method("update_wieldable_data") and grabbed_slot_data.inventory_item.is_being_wielded:
+				#if grabbed_slot_data.inventory_item.ItemType.WIELDABLE and grabbed_slot_data.inventory_item.is_being_wielded:
 					Audio.play_sound(sound_error)
 					print("Can't drop while wielding this item.")
+					grabbed_slot_data = null
 				else:
 					print("Dropping slot data via gamepad")
 					grabbed_slot_data = inventory_data.grab_single_slot_data(index)
@@ -142,6 +162,7 @@ func update_grabbed_slot():
 	else:
 		grabbed_slot.hide()
 
+
 # Grabbed slot data handling for mouse buttons
 func _on_gui_input(event):
 	if event is InputEventMouseButton \
@@ -150,16 +171,18 @@ func _on_gui_input(event):
 			
 			match event.button_index:
 				MOUSE_BUTTON_LEFT:
-					if grabbed_slot_data.inventory_item.ItemType.WIELDABLE and grabbed_slot_data.inventory_item.is_being_wielded:
+					if grabbed_slot_data.inventory_item.has_method("update_wieldable_data") and grabbed_slot_data.inventory_item.is_being_wielded:
+					#if grabbed_slot_data.inventory_item.ItemType.WIELDABLE and grabbed_slot_data.inventory_item.is_being_wielded:
 						Audio.play_sound(sound_error)
 						print("Can't drop while wielding this item.")
 					else:
 						drop_slot_data.emit(grabbed_slot_data)
-						grabbed_slot_data = null
 						print("Dropping ", grabbed_slot_data)
+						grabbed_slot_data = null
 					
 				MOUSE_BUTTON_RIGHT:
-					if grabbed_slot_data.inventory_item.ItemType.WIELDABLE and grabbed_slot_data.inventory_item.is_being_wielded:
+					if grabbed_slot_data.inventory_item.has_method("update_wieldable_data") and grabbed_slot_data.inventory_item.is_being_wielded:
+					#if grabbed_slot_data.inventory_item.ItemType.WIELDABLE and grabbed_slot_data.inventory_item.is_being_wielded:
 						Audio.play_sound(sound_error)
 						print("Can't drop while wielding this item.")
 					else:

@@ -17,7 +17,7 @@ func set_quantity(value: int):
 func can_merge_with(other_slot_data: InventorySlotPD) -> bool:
 	return inventory_item == other_slot_data.inventory_item \
 			and inventory_item.is_stackable \
-			and quantity <= inventory_item.stack_size
+			and quantity < inventory_item.stack_size
 
 func can_fully_merge_with(other_slot_data: InventorySlotPD) -> bool:
 	return inventory_item == other_slot_data.inventory_item \

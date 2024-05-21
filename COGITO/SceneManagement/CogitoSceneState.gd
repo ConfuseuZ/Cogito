@@ -1,7 +1,7 @@
 class_name CogitoSceneState
 extends Resource
 
-var scene_state_dir : String = "user://COGITO_scene_state_"
+var scene_state_dir : String = CogitoSceneManager.cogito_state_dir + CogitoSceneManager.cogito_scene_state_prefix
 
 @export var saved_nodes : Array
 @export var saved_states : Array
@@ -21,7 +21,7 @@ func add_state_data_to_array(state_data):
 
 func write_state(state_slot : String, scene_name : String) -> void:
 	var scene_state_file = str(scene_state_dir + state_slot + "_" + scene_name + ".res")
-	ResourceSaver.save(self, scene_state_file)
+	ResourceSaver.save(self, scene_state_file, ResourceSaver.FLAG_CHANGE_PATH)
 	print("Scene state saved as ", scene_state_file)
 
 

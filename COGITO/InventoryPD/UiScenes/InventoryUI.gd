@@ -5,17 +5,23 @@ const Slot = preload("res://COGITO/InventoryPD/UiScenes/Slot.tscn")
 @export var inventory_name : String = ""
 @onready var grid_container = $MarginContainer/VBoxContainer/GridContainer
 @onready var label = $MarginContainer/VBoxContainer/Label
+@onready var button_take_all: Button = $MarginContainer/VBoxContainer/Button_TakeAll
+
 var slot_array = []
 var first_slot
 
 
 func _ready():
 	label.text = inventory_name
+	button_take_all.hide()
+
 
 func set_inventory_data(inventory_data : InventoryPD):
-	inventory_data.inventory_updated.connect(populate_item_grid)
+	if !inventory_data.inventory_updated.is_connected(populate_item_grid):
+		inventory_data.inventory_updated.connect(populate_item_grid)
 	label.text = inventory_name
 	populate_item_grid(inventory_data)
+
 
 func clear_inventory_data(inventory_data : InventoryPD):
 	inventory_data.inventory_updated.disconnect(populate_item_grid)
@@ -44,4 +50,4 @@ func populate_item_grid(inventory_data : InventoryPD) -> void:
 
 func _on_visibility_changed():
 	# This is here because to prevent a dead end signal error in the inspector.
-	pass # Replace with function body.
+	pass

@@ -1,49 +1,53 @@
-[gd_scene load_steps=139 format=3 uid="uid://cud7jwvomj24d"]
+[gd_scene load_steps=142 format=3 uid="uid://cud7jwvomj24d"]
 
 [ext_resource type="PackedScene" uid="uid://kicjwmh02uwf" path="res://COGITO/PrefabScenes/player.tscn" id="1_7d2n7"]
 [ext_resource type="Script" path="res://COGITO/SceneManagement/cogito_scene.gd" id="1_b15oo"]
 [ext_resource type="Material" uid="uid://dkbgl3p3ffd1" path="res://COGITO/Assets/Materials/Prototype_DarkGrey.tres" id="1_lsda4"]
-[ext_resource type="PackedScene" uid="uid://cwd3g16ep0idw" path="res://COGITO/PrefabScenes/pickup_flashlight.tscn" id="1_oweej"]
+[ext_resource type="PackedScene" uid="uid://cwd3g16ep0idw" path="res://COGITO/PrefabScenes/Pickups/pickup_flashlight.tscn" id="1_oweej"]
 [ext_resource type="Material" uid="uid://hhhudvarh7gk" path="res://COGITO/Assets/Materials/Prototype_Orange.tres" id="2_4ig6i"]
 [ext_resource type="Script" path="res://COGITO/InventoryPD/InventoryPD.gd" id="2_chxar"]
-[ext_resource type="PackedScene" uid="uid://rw7gdui8lu3n" path="res://COGITO/EasyMenus/Scenes/pause_menu.tscn" id="3_q2rvv"]
 [ext_resource type="PackedScene" uid="uid://0c32kepv0ahx" path="res://COGITO/PrefabScenes/Player_HUD.tscn" id="4_1ofwa"]
 [ext_resource type="PackedScene" uid="uid://d3m4ni301eso7" path="res://COGITO/PrefabScenes/carriable_box.tscn" id="6_cy1m6"]
 [ext_resource type="PackedScene" uid="uid://lsun1f1wjfxl" path="res://COGITO/PrefabScenes/ceiling_lamp.tscn" id="7_3y6g2"]
 [ext_resource type="PackedScene" uid="uid://bho0nwh5rlnua" path="res://COGITO/PrefabScenes/target_destructable.tscn" id="8_tk621"]
+[ext_resource type="PackedScene" uid="uid://l61jtpfxu5x5" path="res://COGITO/Components/Interactions/BasicInteraction.tscn" id="8_wnjgg"]
 [ext_resource type="PackedScene" uid="uid://bdyukj85qkut0" path="res://COGITO/PrefabScenes/door.tscn" id="8_xabdk"]
-[ext_resource type="Resource" uid="uid://060gqm74tdlk" path="res://COGITO/InventoryPD/Items/Cogito_StaminaExtension.tres" id="8_yqvna"]
 [ext_resource type="Resource" uid="uid://d4gdqvqsiiqs5" path="res://COGITO/InventoryPD/Items/Cogito_Key.tres" id="9_g1bqh"]
-[ext_resource type="PackedScene" uid="uid://8wkt5k4dl40u" path="res://COGITO/PrefabScenes/pickup_key.tscn" id="9_qv8nx"]
-[ext_resource type="PackedScene" uid="uid://0fj068bj0csc" path="res://COGITO/PrefabScenes/pickup_health_potion.tscn" id="12_2vt2n"]
-[ext_resource type="PackedScene" uid="uid://bab56bf0vqfss" path="res://COGITO/PrefabScenes/pickup_battery.tscn" id="13_6m0er"]
+[ext_resource type="PackedScene" uid="uid://8wkt5k4dl40u" path="res://COGITO/PrefabScenes/Pickups/pickup_key.tscn" id="9_qv8nx"]
+[ext_resource type="PackedScene" uid="uid://0fj068bj0csc" path="res://COGITO/PrefabScenes/Pickups/pickup_health_potion.tscn" id="12_2vt2n"]
+[ext_resource type="PackedScene" uid="uid://bab56bf0vqfss" path="res://COGITO/PrefabScenes/Pickups/pickup_battery.tscn" id="13_6m0er"]
 [ext_resource type="PackedScene" uid="uid://3okedyf5glns" path="res://COGITO/PrefabScenes/container.tscn" id="14_d7sxi"]
 [ext_resource type="Resource" uid="uid://cpqxudfjtjw66" path="res://COGITO/InventoryPD/Items/Cogito_HealthPotion.tres" id="15_86b07"]
 [ext_resource type="Script" path="res://COGITO/InventoryPD/CustomResources/InventorySlotPD.gd" id="16_fg1wi"]
 [ext_resource type="Resource" uid="uid://cupby6uqaftvv" path="res://COGITO/InventoryPD/Items/Cogito_Battery.tres" id="17_nl6sa"]
 [ext_resource type="PackedScene" uid="uid://d1rq8gm20sjo1" path="res://COGITO/PrefabScenes/lamp_standing.tscn" id="18_oxm1j"]
-[ext_resource type="PackedScene" uid="uid://sfypssn0rllo" path="res://COGITO/PrefabScenes/pickup_stamina_extension.tscn" id="18_pobhb"]
+[ext_resource type="PackedScene" uid="uid://sfypssn0rllo" path="res://COGITO/PrefabScenes/Pickups/pickup_stamina_extension.tscn" id="18_pobhb"]
 [ext_resource type="PackedScene" uid="uid://cjs44e1ow53rv" path="res://COGITO/PrefabScenes/heal_zone.tscn" id="19_2mngh"]
 [ext_resource type="PackedScene" uid="uid://8h462cd7whew" path="res://COGITO/PrefabScenes/hazard_zone.tscn" id="20_dgnbq"]
 [ext_resource type="PackedScene" uid="uid://bnygtkw3tvet6" path="res://COGITO/PrefabScenes/press_and_hold_wheel.tscn" id="22_ni6um"]
-[ext_resource type="Script" path="res://COGITO/Scripts/Cogito_Door.gd" id="23_rfav8"]
+[ext_resource type="Script" path="res://COGITO/CogitoObjects/Cogito_Door.gd" id="23_rfav8"]
 [ext_resource type="PackedScene" uid="uid://3gwo23kpr58f" path="res://COGITO/PrefabScenes/lightzone_lamp.tscn" id="24_p17c7"]
 [ext_resource type="AudioStream" uid="uid://ftl7je6blfwq" path="res://COGITO/Assets/Audio/Kenney/stoneDrag4.ogg" id="25_3nnou"]
-[ext_resource type="PackedScene" uid="uid://bc52bohkbf1yp" path="res://COGITO/PrefabScenes/pickup_diamond_key_a.tscn" id="25_w5f1m"]
-[ext_resource type="PackedScene" uid="uid://djfg6ea5cbhyv" path="res://COGITO/PrefabScenes/pickup_diamond_key_b.tscn" id="26_1prk2"]
+[ext_resource type="PackedScene" uid="uid://bc52bohkbf1yp" path="res://COGITO/PrefabScenes/Pickups/pickup_diamond_key_a.tscn" id="25_w5f1m"]
+[ext_resource type="PackedScene" uid="uid://djfg6ea5cbhyv" path="res://COGITO/PrefabScenes/Pickups/pickup_diamond_key_b.tscn" id="26_1prk2"]
 [ext_resource type="Texture2D" uid="uid://cgcrwmu2bs4se" path="res://COGITO/Assets/Textures/Prototype Textures/PNG/Green/texture_01.png" id="27_0a6c2"]
-[ext_resource type="Script" path="res://COGITO/Scripts/Cogito_Switch.gd" id="27_r5oie"]
+[ext_resource type="Script" path="res://COGITO/CogitoObjects/Cogito_Switch.gd" id="27_r5oie"]
 [ext_resource type="Resource" uid="uid://gu1buq254o4l" path="res://COGITO/InventoryPD/Items/Cogito_DiamondKey_Combine.tres" id="28_3r4lg"]
-[ext_resource type="Resource" uid="uid://ckvdkigvwowm5" path="res://COGITO/InventoryPD/Items/Cogito_Flashlight.tres" id="28_ihguh"]
 [ext_resource type="AudioStream" uid="uid://bfmqga66x7l1k" path="res://COGITO/Assets/Audio/Kenney/rockHit2.ogg" id="30_42jtk"]
-[ext_resource type="PackedScene" uid="uid://o0xgl5obc551" path="res://COGITO/PrefabScenes/pickup_pistol.tscn" id="30_a7v26"]
-[ext_resource type="Resource" uid="uid://lc5uq2e6ldah" path="res://COGITO/InventoryPD/Items/Cogito_Pistol.tres" id="31_clh1y"]
+[ext_resource type="PackedScene" uid="uid://o0xgl5obc551" path="res://COGITO/PrefabScenes/Pickups/pickup_pistol.tscn" id="30_a7v26"]
 [ext_resource type="PackedScene" uid="uid://dbtarejfetahc" path="res://COGITO/PrefabScenes/Cabinet_prefab.tscn" id="35_ee66c"]
+[ext_resource type="Script" path="res://COGITO/Scripts/hazard_zone.gd" id="35_hq7gn"]
+[ext_resource type="Texture2D" uid="uid://cg5knuav7df4o" path="res://COGITO/Assets/Graphics/HintIcons/Hint_X.png" id="36_7nev7"]
 [ext_resource type="AudioStream" uid="uid://b6wdy2102jymr" path="res://COGITO/Assets/Audio/Kenney/UiAudio/switch2.ogg" id="36_42jeg"]
 [ext_resource type="Material" uid="uid://dhg1uhiq7ywn2" path="res://COGITO/Assets/Materials/Prototype_Green.tres" id="38_l5vpp"]
-[ext_resource type="Script" path="res://COGITO/Scripts/ladder_area.gd" id="39_ferka"]
-[ext_resource type="PackedScene" uid="uid://c6dn6bn47xyrj" path="res://COGITO/Assets/Models/ladder.glb" id="39_ri7bt"]
+[ext_resource type="PackedScene" uid="uid://dkie3md1cmsip" path="res://COGITO/EasyMenus/Scenes/PauseMenu.tscn" id="40_6m7mg"]
+[ext_resource type="PackedScene" uid="uid://i7fum2jx3ac3" path="res://COGITO/PrefabScenes/ladder.tscn" id="41_q27ev"]
 [ext_resource type="Script" path="res://COGITO/Scripts/scene_transition_zone.gd" id="43_bchdf"]
+[ext_resource type="PackedScene" uid="uid://bhj146kxvb3s5" path="res://COGITO/PrefabScenes/document.tscn" id="44_im51b"]
+[ext_resource type="PackedScene" uid="uid://i4rqcx7lyrfd" path="res://COGITO/PrefabScenes/keypad_prefab.tscn" id="48_150m3"]
+[ext_resource type="Script" path="res://COGITO/QuestSystemPD/Components/QuestUpdater.gd" id="49_obvm3"]
+[ext_resource type="Resource" uid="uid://yb7k8evveqdp" path="res://COGITO/QuestSystemPD/Quests/QuestA.tres" id="50_blav1"]
+[ext_resource type="Resource" uid="uid://bmkcm7tkpqjwb" path="res://COGITO/QuestSystemPD/Quests/QuestB.tres" id="51_cmhea"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2veog"]
 sky_top_color = Color(0.576471, 0.960784, 1, 1)
@@ -51,12 +55,12 @@ sky_horizon_color = Color(0.745098, 0.779412, 0.785294, 1)
 ground_bottom_color = Color(0.168627, 0.156863, 0.141176, 1)
 ground_horizon_color = Color(0.745098, 0.779412, 0.785294, 1)
 
-[sub_resource type="Sky" id="Sky_sq3iy"]
+[sub_resource type="Sky" id="Sky_bajs6"]
 sky_material = SubResource("ProceduralSkyMaterial_2veog")
 
 [sub_resource type="Environment" id="Environment_11v21"]
 background_mode = 2
-sky = SubResource("Sky_sq3iy")
+sky = SubResource("Sky_bajs6")
 ambient_light_source = 3
 ambient_light_color = Color(0.588235, 0.588235, 0.588235, 1)
 ambient_light_sky_contribution = 0.1
@@ -164,6 +168,13 @@ size = Vector3(0.2, 3, 10.2)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8jyx7"]
 points = PackedVector3Array(-0.1, -1.5, -5.1, 0.1, -1.5, -5.1, -0.1, -1.5, 5.1, -0.1, 1.5, -5.1, 0.1, 1.5, -5.1, 0.1, -1.5, 5.1, -0.1, 1.5, 5.1, 0.1, 1.5, 5.1)
 
+[sub_resource type="BoxMesh" id="BoxMesh_sjsod"]
+material = ExtResource("1_lsda4")
+size = Vector3(0.2, 3, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_msc2o"]
+size = Vector3(0.2, 3, 0.6)
+
 [sub_resource type="BoxMesh" id="BoxMesh_fccbs"]
 material = ExtResource("1_lsda4")
 size = Vector3(0.2, 3, 19.6)
@@ -247,24 +258,20 @@ rings = 1
 [sub_resource type="BoxMesh" id="BoxMesh_woscm"]
 size = Vector3(0.3, 0.3, 0.1)
 
-[sub_resource type="Resource" id="Resource_wdflo"]
+[sub_resource type="Resource" id="Resource_v7b11"]
 script = ExtResource("16_fg1wi")
 inventory_item = ExtResource("15_86b07")
 quantity = 2
 
-[sub_resource type="Resource" id="Resource_hpi7r"]
+[sub_resource type="Resource" id="Resource_eku8j"]
 script = ExtResource("16_fg1wi")
 inventory_item = ExtResource("17_nl6sa")
 quantity = 2
 
-<<<<<<< Updated upstream
-[sub_resource type="Resource" id="Resource_5ga1w"]
-=======
-[sub_resource type="Resource" id="Resource_d3j8o"]
->>>>>>> Stashed changes
+[sub_resource type="Resource" id="Resource_cubs3"]
 resource_local_to_scene = true
 script = ExtResource("2_chxar")
-inventory_slots = Array[ExtResource("16_fg1wi")]([SubResource("Resource_wdflo"), SubResource("Resource_hpi7r"), null, null])
+inventory_slots = Array[ExtResource("16_fg1wi")]([SubResource("Resource_v7b11"), SubResource("Resource_eku8j"), null, null])
 
 [sub_resource type="BoxMesh" id="BoxMesh_w1o4d"]
 material = ExtResource("2_4ig6i")
@@ -276,13 +283,13 @@ size = Vector3(4, 0.1, 2)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hq8yc"]
 points = PackedVector3Array(-2, -0.05, -1, -2, 0.05, -1, 2, -0.05, -1, -2, -0.05, 1, -2, 0.05, 1, 2, 0.05, -1, 2, -0.05, 1, 2, 0.05, 1)
 
-[sub_resource type="Resource" id="Resource_1m0cj"]
+[sub_resource type="Resource" id="Resource_2sx6f"]
 resource_local_to_scene = true
 script = ExtResource("16_fg1wi")
 inventory_item = ExtResource("17_nl6sa")
 quantity = 1
 
-[sub_resource type="Resource" id="Resource_ogqmk"]
+[sub_resource type="Resource" id="Resource_u8yjv"]
 resource_local_to_scene = true
 script = ExtResource("16_fg1wi")
 inventory_item = ExtResource("17_nl6sa")
@@ -313,70 +320,6 @@ size = Vector3(2, 0.1, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xr44e"]
 size = Vector3(2, 0.1, 2)
 
-[sub_resource type="Resource" id="Resource_2eq5d"]
-resource_local_to_scene = true
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("17_nl6sa")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_q21gv"]
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("17_nl6sa")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_op7ip"]
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("17_nl6sa")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_6sppo"]
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("17_nl6sa")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_itbno"]
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("17_nl6sa")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_5a5sb"]
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("17_nl6sa")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_k2gss"]
-resource_local_to_scene = true
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("8_yqvna")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_h0rmt"]
-resource_local_to_scene = true
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("28_ihguh")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_a1xk0"]
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("15_86b07")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_g6hy2"]
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("15_86b07")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_db2dq"]
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("15_86b07")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_rr3od"]
-resource_local_to_scene = true
-script = ExtResource("16_fg1wi")
-inventory_item = ExtResource("31_clh1y")
-quantity = 1
-
 [sub_resource type="BoxMesh" id="BoxMesh_ebsqj"]
 size = Vector3(0.1, 1.5, 0.1)
 
@@ -400,23 +343,13 @@ size = Vector3(1.5, 0.01, 1.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_el7ru"]
 size = Vector3(1.5, 0.01, 1.5)
 
-<<<<<<< Updated upstream
-[sub_resource type="Resource" id="Resource_2k018"]
-=======
 [sub_resource type="BoxShape3D" id="BoxShape3D_ht4uj"]
 size = Vector3(100, 3, 100)
 
-[sub_resource type="Resource" id="Resource_lychn"]
->>>>>>> Stashed changes
+[sub_resource type="Resource" id="Resource_aoreq"]
 resource_local_to_scene = true
 script = ExtResource("2_chxar")
 inventory_slots = Array[ExtResource("16_fg1wi")]([null, null, null, null, null, null, null, null])
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rj7xk"]
-size = Vector3(0.139, 3.148, 0.8)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xagqk"]
-size = Vector3(0.8, 3.03359, 0.1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_fj0b6"]
 size = Vector3(3, 2.5, 2)
@@ -428,6 +361,44 @@ albedo_color = Color(0.913725, 0.521569, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uobrk"]
 size = Vector3(3, 2.5, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pfhrt"]
+size = Vector3(0.07, 1.8, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okhh2"]
+albedo_color = Color(0.619608, 0.552941, 0.494118, 1)
+metallic_specular = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_br66c"]
+size = Vector3(0.1, 2, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mxkv6"]
+albedo_color = Color(0.729412, 0.615686, 0.603922, 1)
+metallic_specular = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_hyokq"]
+size = Vector3(0.1, 0.1, 2.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_co2vf"]
+size = Vector3(0.1, 0.1, 2.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mvqfg"]
+size = Vector3(0.1, 2, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijtgs"]
+size = Vector3(1.5, 3, 1.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x0tj6"]
+size = Vector3(1.5, 3, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lhxu"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.184314, 0.588235, 0.701961, 0.392157)
+rim = 0.0
+rim_tint = 0.0
+backlight = Color(0.509804, 0.294118, 0.294118, 1)
+disable_receive_shadows = true
 
 [node name="COGITO_Demo_01" type="Node3D" node_paths=PackedStringArray("connectors")]
 script = ExtResource("1_b15oo")
@@ -479,6 +450,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999994)
 mesh = SubResource("BoxMesh_cx70k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="STATIC_ENVIRONMENT/Floor5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999994)
+shape = SubResource("ConvexPolygonShape3D_22r6n")
+
+[node name="Floor7" type="StaticBody3D" parent="STATIC_ENVIRONMENT"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, -0.05, -10)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="STATIC_ENVIRONMENT/Floor7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999994)
+mesh = SubResource("BoxMesh_cx70k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="STATIC_ENVIRONMENT/Floor7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0999994)
 shape = SubResource("ConvexPolygonShape3D_22r6n")
 
@@ -637,6 +620,19 @@ transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 4.59655,
 text = "SCENE TRANSITION"
 font_size = 48
 
+[node name="Wall_w_Door2" type="CSGPolygon3D" parent="STATIC_ENVIRONMENT"]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 4.8, 0, -5)
+use_collision = true
+collision_layer = 3
+polygon = PackedVector2Array(0, 0, 0, 3, 9.6, 3, 9.6, 0, 5, 0, 5, 2, 4, 2, 4, 0)
+depth = 0.2
+material = ExtResource("1_lsda4")
+
+[node name="Txt_Quests" type="Label3D" parent="STATIC_ENVIRONMENT/Wall_w_Door2"]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 4.59655, 2.18871, 0.0237131)
+text = "QUEST MANAGER"
+font_size = 48
+
 [node name="WallCrouch" type="StaticBody3D" parent="STATIC_ENVIRONMENT"]
 transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.4105, 1, -2.89699)
 metadata/_edit_group_ = true
@@ -670,12 +666,12 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.9, 0
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="STATIC_ENVIRONMENT/Wall7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-mesh = SubResource("BoxMesh_ukt6d")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -4.8)
+mesh = SubResource("BoxMesh_sjsod")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="STATIC_ENVIRONMENT/Wall7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-shape = SubResource("ConvexPolygonShape3D_8jyx7")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -4.8)
+shape = SubResource("BoxShape3D_msc2o")
 
 [node name="Wall16" type="StaticBody3D" parent="STATIC_ENVIRONMENT"]
 transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 14.9, 0, 0)
@@ -985,6 +981,7 @@ horizontal_alignment = 0
 
 [node name="BoxPressAndHold" type="StaticBody3D" parent="STATIC_ENVIRONMENT"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.5, 0, 7.5)
+collision_layer = 3
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="STATIC_ENVIRONMENT/BoxPressAndHold"]
@@ -1234,6 +1231,8 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 
 mesh = SubResource("BoxMesh_woscm")
 skeleton = NodePath("../../..")
 
+[node name="BasicInteraction" parent="INTERACTIVE_OBJECTS/ButtonChain" instance=ExtResource("8_wnjgg")]
+
 [node name="CeilingLamp" parent="INTERACTIVE_OBJECTS" instance=ExtResource("7_3y6g2")]
 
 [node name="CeilingLamp2" parent="INTERACTIVE_OBJECTS" instance=ExtResource("7_3y6g2")]
@@ -1243,18 +1242,13 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -21.5641, 1.7, 5.40424)
 
 [node name="Chest" parent="INTERACTIVE_OBJECTS" groups=["external_inventory"] instance=ExtResource("14_d7sxi")]
-transform = Transform3D(-0.125576, 0, 0.992084, 0, 1, 0, -0.992084, 0, -0.125576, -4.38933, 0.0425703, 5.97176)
+transform = Transform3D(0.686504, 0, -0.727126, 0, 1, 0, 0.727126, 0, 0.686504, -4.38933, 0.0425703, 5.97176)
 inventory_name = "Chest"
-<<<<<<< Updated upstream
-inventory_data = SubResource("Resource_5ga1w")
-=======
-inventory_data = SubResource("Resource_d3j8o")
+inventory_data = SubResource("Resource_cubs3")
 uses_animation = true
 open_animation = "open"
->>>>>>> Stashed changes
 
-[node name="PressAndHold" parent="INTERACTIVE_OBJECTS" node_paths=PackedStringArray("nodes_to_trigger") instance=ExtResource("22_ni6um")]
-rotate_while_holding = true
+[node name="Turnwheel" parent="INTERACTIVE_OBJECTS" node_paths=PackedStringArray("nodes_to_trigger") instance=ExtResource("22_ni6um")]
 nodes_to_trigger = [NodePath("../RampA"), NodePath("../RampB")]
 hold_audio_stream = ExtResource("25_3nnou")
 
@@ -1305,7 +1299,6 @@ transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -12.0996
 [node name="Pickup_Battery" parent="INTERACTIVE_OBJECTS/Cabinet_Prefab" instance=ExtResource("13_6m0er")]
 transform = Transform3D(-3.5715e-08, -0.817064, 0.576546, 1, -4.37114e-08, 0, 2.52016e-08, 0.576546, 0.817064, -0.136503, 0.434938, -0.0415781)
 mass = 0.5
-slot_data = SubResource("Resource_1m0cj")
 
 [node name="MeshInstance3D2" parent="INTERACTIVE_OBJECTS/Cabinet_Prefab/Pickup_Battery" index="0"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -1322,9 +1315,11 @@ skeleton = NodePath("../../../..")
 [node name="CollisionShape3D" parent="INTERACTIVE_OBJECTS/Cabinet_Prefab/Pickup_Battery" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0306714, 0)
 
+[node name="PickupComponent" parent="INTERACTIVE_OBJECTS/Cabinet_Prefab/Pickup_Battery" index="4"]
+slot_data = SubResource("Resource_2sx6f")
+
 [node name="Pickup_Battery2" parent="INTERACTIVE_OBJECTS/Cabinet_Prefab" instance=ExtResource("13_6m0er")]
 transform = Transform3D(-3.5715e-08, -0.817064, 0.576546, 1, -4.37114e-08, 0, 2.52016e-08, 0.576546, 0.817064, 0.215507, 0.434938, -0.0547223)
-slot_data = SubResource("Resource_ogqmk")
 
 [node name="MeshInstance3D2" parent="INTERACTIVE_OBJECTS/Cabinet_Prefab/Pickup_Battery2" index="0"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -1341,9 +1336,11 @@ skeleton = NodePath("../../../..")
 [node name="CollisionShape3D" parent="INTERACTIVE_OBJECTS/Cabinet_Prefab/Pickup_Battery2" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0306714, 0)
 
+[node name="PickupComponent" parent="INTERACTIVE_OBJECTS/Cabinet_Prefab/Pickup_Battery2" index="4"]
+slot_data = SubResource("Resource_u8yjv")
+
 [node name="CarriableBox" parent="INTERACTIVE_OBJECTS" instance=ExtResource("6_cy1m6")]
 transform = Transform3D(0.90323, 0, 0.429156, 0, 1, 0, -0.429156, 0, 0.90323, -14.0048, 0.748613, 6.50097)
-carry_distance_offset = -0.3
 
 [node name="GateA" type="AnimatableBody3D" parent="INTERACTIVE_OBJECTS"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -45, 0, 14.6)
@@ -1417,6 +1414,8 @@ polygon = PackedVector2Array(0, 0, 0, 1, 0.3, 1, 0.5, 0.85, 0.7, 1, 1, 1, 1, 0)
 depth = 0.2
 material = ExtResource("1_lsda4")
 
+[node name="BasicInteraction" parent="INTERACTIVE_OBJECTS/SocketForDiamondKey" instance=ExtResource("8_wnjgg")]
+
 [node name="Button" type="AnimatableBody3D" parent="INTERACTIVE_OBJECTS"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.2, 1.23087, 18.5756)
 collision_layer = 3
@@ -1440,6 +1439,8 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 
 mesh = SubResource("BoxMesh_woscm")
 skeleton = NodePath("../../..")
 
+[node name="BasicInteraction" parent="INTERACTIVE_OBJECTS/Button" instance=ExtResource("8_wnjgg")]
+
 [node name="MovingPlattform" type="AnimatableBody3D" parent="INTERACTIVE_OBJECTS"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, -0.05, 17.5)
 script = ExtResource("23_rfav8")
@@ -1460,55 +1461,43 @@ shape = SubResource("BoxShape3D_xr44e")
 [node name="ITEM_PICKUPS" type="Node" parent="."]
 
 [node name="Pickup_Key" parent="ITEM_PICKUPS" instance=ExtResource("9_qv8nx")]
-transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -20.3432, 1.15447, 14.3198)
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -20.3141, 1.15447, 14.2689)
 
 [node name="Pickup_Battery" parent="ITEM_PICKUPS" instance=ExtResource("13_6m0er")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.8169, 0.119063, 2.84064)
-slot_data = SubResource("Resource_2eq5d")
 
 [node name="Pickup_Battery2" parent="ITEM_PICKUPS" instance=ExtResource("13_6m0er")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.8169, 0.119063, 2.54394)
-slot_data = SubResource("Resource_q21gv")
 
 [node name="Pickup_Battery3" parent="ITEM_PICKUPS" instance=ExtResource("13_6m0er")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.8169, 0.119063, 3.15544)
-slot_data = SubResource("Resource_op7ip")
 
 [node name="Pickup_Battery4" parent="ITEM_PICKUPS" instance=ExtResource("13_6m0er")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.5813, 0.119063, 2.73264)
-slot_data = SubResource("Resource_6sppo")
 
 [node name="Pickup_Battery5" parent="ITEM_PICKUPS" instance=ExtResource("13_6m0er")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.256, 0.119063, 2.92864)
-slot_data = SubResource("Resource_itbno")
 
 [node name="Pickup_Battery6" parent="ITEM_PICKUPS" instance=ExtResource("13_6m0er")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.5813, 0.119063, 2.99264)
-slot_data = SubResource("Resource_5a5sb")
 
 [node name="Pickup_StaminaExtension" parent="ITEM_PICKUPS" instance=ExtResource("18_pobhb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23053, 1.03198, 0.820036)
-slot_data = SubResource("Resource_k2gss")
 
 [node name="Pickup_Flashlight" parent="ITEM_PICKUPS" instance=ExtResource("1_oweej")]
 transform = Transform3D(0.707107, 0.603448, 0.368578, 0, 0.521248, -0.853405, -0.707107, 0.603448, 0.368578, -4.73354, 1.21477, 0.740502)
-slot_data = SubResource("Resource_h0rmt")
 
 [node name="HealthPotion" parent="ITEM_PICKUPS" instance=ExtResource("12_2vt2n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.04485, 1.30439, -2.94002)
-slot_data = SubResource("Resource_a1xk0")
 
 [node name="HealthPotion2" parent="ITEM_PICKUPS" instance=ExtResource("12_2vt2n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.40325, 1.30439, -2.63182)
-slot_data = SubResource("Resource_g6hy2")
 
 [node name="HealthPotion3" parent="ITEM_PICKUPS" instance=ExtResource("12_2vt2n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.11495, 1.30439, -2.43652)
-slot_data = SubResource("Resource_db2dq")
 
 [node name="pickup_pistol" parent="ITEM_PICKUPS" instance=ExtResource("30_a7v26")]
 transform = Transform3D(-0.476652, -0.798393, -0.367929, 0, 0.418533, -0.908202, 0.879092, -0.432897, -0.199495, 0.0763087, 1.13928, 7.81337)
-slot_data = SubResource("Resource_rr3od")
 
 [node name="RotatingLift" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.6928, 3.8552, 8.98188)
@@ -1585,6 +1574,17 @@ drains your health
 over time."
 vertical_alignment = 0
 
+[node name="KillZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -10, 20)
+script = ExtResource("35_hq7gn")
+player_attribute = "health"
+drain_amount = 1000.0
+hint_icon = ExtResource("36_7nev7")
+hint_message = "Fell to your death."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillZone"]
+shape = SubResource("BoxShape3D_ht4uj")
+
 [node name="DiamondKeyA" parent="." instance=ExtResource("25_w5f1m")]
 transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, 1, -1, 4.37114e-08, -4.37114e-08, -48.826, 1.15805, 11.5805)
 
@@ -1602,44 +1602,22 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.1480
 
 [node name="Player" parent="." instance=ExtResource("1_7d2n7")]
 transform = Transform3D(-1, 0, 7.45058e-07, 0, 1, 0, -7.45058e-07, 0, -1, -7.5375, 0.905039, -3.30884)
-pause_menu = NodePath("../PauseMenu")
+pause_menu = NodePath("../TabMenu")
 player_hud = NodePath("../Player_HUD")
-<<<<<<< Updated upstream
-inventory_data = SubResource("Resource_2k018")
-=======
-is_using_sanity = false
-inventory_data = SubResource("Resource_lychn")
->>>>>>> Stashed changes
+inventory_data = SubResource("Resource_aoreq")
 step_height_camera_lerp = 1.5
 
 [node name="Player_HUD" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_1ofwa")]
 player = NodePath("../Player")
-use_stamina_component = true
 
-<<<<<<< Updated upstream
-[node name="PauseMenu" parent="." instance=ExtResource("3_q2rvv")]
-=======
 [node name="TabMenu" parent="." node_paths=PackedStringArray("nodes_to_focus") instance=ExtResource("40_6m7mg")]
-nodes_to_focus = [NodePath("Content/TabContainer/Game/VBoxContainer/ResumeGameButton"), NodePath("Content/TabContainer/Gameplay/ScrollContainer/VBoxContainer/InvertYAxisCheckButton"), null, NodePath("Content/TabContainer/Audio/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/SFXVolumeSlider"), null]
->>>>>>> Stashed changes
+nodes_to_focus = [null, null, null, null, null]
 
-[node name="Ladder" type="Area3D" parent="."]
-transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, -18.4395, 1.6, -4.87125)
-script = ExtResource("39_ferka")
-
-[node name="ladderArea" type="CollisionShape3D" parent="Ladder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
-shape = SubResource("BoxShape3D_rj7xk")
-
-[node name="ladder" parent="Ladder" instance=ExtResource("39_ri7bt")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ladder/ladder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00152588, -0.0832032, 0)
-shape = SubResource("BoxShape3D_xagqk")
+[node name="Ladder" parent="." instance=ExtResource("41_q27ev")]
 
 [node name="Stairs" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8, 0.15, 0.75)
+metadata/_edit_group_ = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Stairs"]
 use_collision = true
@@ -1718,6 +1696,174 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.5,
 
 [node name="RayCast3D" type="RayCast3D" parent="ConnectorA"]
 target_position = Vector3(0, 0, -1)
+
+[node name="Document" parent="." instance=ExtResource("44_im51b")]
+
+[node name="Door_for_Keypad" type="AnimatableBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.8, 0, 2.91)
+script = ExtResource("23_rfav8")
+is_locked = true
+key_hint = "Key needed."
+is_sliding = true
+closed_rotation_deg = -90.0
+closed_position = Vector3(-10.8, 0, 2.91)
+open_position = Vector3(-10.8, -2.1, 2.91)
+door_speed = 0.9
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Door_for_Keypad"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.5)
+mesh = SubResource("BoxMesh_pfhrt")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_okhh2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Door_for_Keypad"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-07, 1, 2.95)
+mesh = SubResource("BoxMesh_br66c")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_mxkv6")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Door_for_Keypad"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.05)
+mesh = SubResource("BoxMesh_br66c")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_mxkv6")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Door_for_Keypad"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95, 1.5)
+mesh = SubResource("BoxMesh_hyokq")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_mxkv6")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Door_for_Keypad"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0500001, 1.5)
+mesh = SubResource("BoxMesh_co2vf")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_mxkv6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_for_Keypad"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.5)
+shape = SubResource("BoxShape3D_mvqfg")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Door_for_Keypad"]
+volume_db = -26.0
+bus = &"SFX"
+
+[node name="BasicInteraction" parent="Door_for_Keypad" instance=ExtResource("8_wnjgg")]
+interaction_text = "Interact"
+
+[node name="Keypad" parent="." node_paths=PackedStringArray("doors_to_unlock") instance=ExtResource("48_150m3")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -10.5, 1.4, 2.8)
+passcode = "0451"
+doors_to_unlock = [NodePath("../Door_for_Keypad")]
+open_when_unlocked = true
+
+[node name="QuestTriggerAStart" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.54229, -6.6)
+script = ExtResource("49_obvm3")
+quest_to_update = ExtResource("50_blav1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="QuestTriggerAStart"]
+shape = SubResource("BoxShape3D_ijtgs")
+
+[node name="TransparentBox" type="MeshInstance3D" parent="QuestTriggerAStart"]
+mesh = SubResource("BoxMesh_x0tj6")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7lhxu")
+
+[node name="Txt_QuestTrigger" type="Label3D" parent="QuestTriggerAStart"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+text = "Start Quest A"
+vertical_alignment = 0
+
+[node name="QuestTriggerAComplete" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.54229, -8.6)
+script = ExtResource("49_obvm3")
+quest_to_update = ExtResource("50_blav1")
+update_type = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="QuestTriggerAComplete"]
+shape = SubResource("BoxShape3D_ijtgs")
+
+[node name="TransparentBox" type="MeshInstance3D" parent="QuestTriggerAComplete"]
+mesh = SubResource("BoxMesh_x0tj6")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7lhxu")
+
+[node name="Txt_QuestTrigger" type="Label3D" parent="QuestTriggerAComplete"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+text = "Complete Quest A"
+vertical_alignment = 0
+
+[node name="QuestTriggerBStart" type="Area3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.2, 1.54229, -6.6)
+script = ExtResource("49_obvm3")
+quest_to_update = ExtResource("51_cmhea")
+update_type = 3
+counter_change = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="QuestTriggerBStart"]
+shape = SubResource("BoxShape3D_ijtgs")
+
+[node name="TransparentBox" type="MeshInstance3D" parent="QuestTriggerBStart"]
+mesh = SubResource("BoxMesh_x0tj6")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7lhxu")
+
+[node name="Txt_QuestTrigger" type="Label3D" parent="QuestTriggerBStart"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+text = "Increase Quest B
+Counter"
+vertical_alignment = 0
+
+[node name="QuestTriggerBprogress" type="Area3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.2, 1.54229, -8.6)
+script = ExtResource("49_obvm3")
+quest_to_update = ExtResource("51_cmhea")
+update_type = 3
+counter_change = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="QuestTriggerBprogress"]
+shape = SubResource("BoxShape3D_ijtgs")
+
+[node name="TransparentBox" type="MeshInstance3D" parent="QuestTriggerBprogress"]
+mesh = SubResource("BoxMesh_x0tj6")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7lhxu")
+
+[node name="Txt_QuestTrigger" type="Label3D" parent="QuestTriggerBprogress"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+text = "Increase Quest B
+Counter"
+vertical_alignment = 0
+
+[node name="QuestTriggerBprogress2" type="Area3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3.2, 1.54229, -10.7)
+script = ExtResource("49_obvm3")
+quest_to_update = ExtResource("51_cmhea")
+update_type = 3
+counter_change = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="QuestTriggerBprogress2"]
+shape = SubResource("BoxShape3D_ijtgs")
+
+[node name="TransparentBox" type="MeshInstance3D" parent="QuestTriggerBprogress2"]
+mesh = SubResource("BoxMesh_x0tj6")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7lhxu")
+
+[node name="Txt_QuestTrigger" type="Label3D" parent="QuestTriggerBprogress2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+text = "Increase Quest B
+Counter"
+vertical_alignment = 0
+
+[connection signal="body_entered" from="KillZone" to="KillZone" method="_on_body_entered"]
+[connection signal="body_exited" from="KillZone" to="KillZone" method="_on_body_exited"]
+[connection signal="body_entered" from="QuestTriggerAStart" to="QuestTriggerAStart" method="_on_body_entered"]
+[connection signal="body_entered" from="QuestTriggerAComplete" to="QuestTriggerAComplete" method="_on_body_entered"]
+[connection signal="body_entered" from="QuestTriggerBStart" to="QuestTriggerBStart" method="_on_body_entered"]
+[connection signal="body_entered" from="QuestTriggerBprogress" to="QuestTriggerBprogress" method="_on_body_entered"]
+[connection signal="body_entered" from="QuestTriggerBprogress2" to="QuestTriggerBprogress2" method="_on_body_entered"]
 
 [editable path="INTERACTIVE_OBJECTS/Cabinet_Prefab/Pickup_Battery"]
 [editable path="INTERACTIVE_OBJECTS/Cabinet_Prefab/Pickup_Battery2"]
